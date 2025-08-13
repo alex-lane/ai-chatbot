@@ -1,6 +1,6 @@
 # AI Chatbot Landing Page
 
-This project is a starter Flask application that serves an AI-themed landing page using the Jinja template engine.
+This project is a starter Flask application that serves an AI-themed landing page using the Jinja template engine and Gemini.
 
 ## Getting Started
 
