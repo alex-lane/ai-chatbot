@@ -10,7 +10,13 @@ This project is a starter Flask application that serves an AI-themed landing pag
 pip install -r requirements.txt
 ```
 
-2. Run the development server:
+2. Set up `.env`:
+
+```bash
+GEMINI_API_KEY={{Gemini API Key}}
+```
+
+3. Run the development server:
 
 ```bash
 python app.py
