@@ -1,0 +1,25 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  background: radial-gradient(circle at top left, #0f2027, #203a43, #2c5364);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  text-align: center;
+}
+
+h1 {
+  font-size: 3rem;
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.7);
+}
+
+.tagline {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  color: #ccc;
+}
