@@ -12,6 +12,42 @@
     <div class="container">
       <h1>AI Chatbot</h1>
       <p class="tagline">Your intelligent assistant in a conversation</p>
+      <div class="chat-container">
+        <div id="chat-messages"></div>
+        <form id="chat-form">
+          <input type="text" id="user-input" placeholder="Type your message..." />
+          <button type="submit">Send</button>
+        </form>
+      </div>
     </div>
+
+    <script>
+      const form = document.getElementById('chat-form');
+      const input = document.getElementById('user-input');
+      const messages = document.getElementById('chat-messages');
+
+      function addMessage(sender, text) {
+        const div = document.createElement('div');
+        div.className = 'message';
+        div.innerHTML = `<strong>${sender}:</strong> ${text}`;
+        messages.appendChild(div);
+        messages.scrollTop = messages.scrollHeight;
+      }
+
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const text = input.value.trim();
+        if (!text) return;
+        addMessage('You', text);
+        input.value = '';
+        const res = await fetch('/chat', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ message: text }),
+        });
+        const data = await res.json();
+        addMessage('Gemini', data.response);
+      });
+    </script>
   </body>
 </html>
