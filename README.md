@@ -1,0 +1,19 @@
+# AI Chatbot Landing Page
+
+This project is a starter Flask application that serves an AI-themed landing page using the Jinja template engine.
+
+## Getting Started
+
+1. Create a virtual environment and install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+2. Run the development server:
+
+```bash
+python app.py
+```
+
+Visit `http://localhost:5000` to see the landing page.
